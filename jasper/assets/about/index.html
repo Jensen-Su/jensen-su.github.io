@@ -2,12 +2,33 @@
 <html>
 <head>
     <!--mathjax-->
-    <!--script type="text/javascript" 
-        src="httpsp://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script-->
     <script type="text/javascript" 
-        src="../assets/MathJax.js"></script>
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}}); </script>
 
+    <style>
+    /* Adapted from */
+    /* https://groups.google.com/d/msg/mathjax-users/jqQxrmeG48o/oAaivLgLN90J, */
+    /* by David Cervone */
+
+    @font-face {
+        font-family: 'MJX_Math';
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); /* IE9 Compat Modes */
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot?iefix') format('eot'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff')  format('woff'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf')  format('opentype'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/svg/MathJax_Math-Italic.svg#MathJax_Math-Italic') format('svg');
+    }
+
+    @font-face {
+        font-family: 'MJX_Main';
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); /* IE9 Compat Modes */
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot?iefix') format('eot'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff')  format('woff'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf')  format('opentype'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/svg/MathJax_Main-Regular.svg#MathJax_Main-Regular') format('svg');
+    }
+    </style>
     <!-- [[! Document Settings ]] -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -142,9 +163,6 @@
     <!-- [[! The main JavaScript file for Casper ]] -->
     <script type="text/javascript" src="/jasper/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="/jasper/assets/js/index.js"></script>
-
-    <!--mathjax-->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <!-- Add Google Analytics  -->
         <!-- Google Analytics Tracking code -->
