@@ -12,6 +12,37 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>test for markdown</title>
+	  <link>/jasper//test-for-markdown</link>
+	  <author>Jensen Su</author>
+	  <pubDate>2016-07-12T18:10:00+08:00</pubDate>
+	  <guid>/jasper//test-for-markdown</guid>
+	  <description><![CDATA[
+	     <p>Hello world, this used for testing markdown.</p>
+
+<p>The Jekyll theme is the <a href="https://github.com/biomadeira/jasper">Jasper Theme</a>.</p>
+
+<script type="math/tex; mode=display">\frac{x^2}{\sqrt{y+1}}</script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\left(\begin{matrix}
+     0 & 1 \\
+
+     1 & 0
+\end{matrix}\right) \rightarrow
+\left(\begin{matrix}
+     0 & 1 \\
+
+     1 & 0
+\end{matrix}\right) %]]></script>
+
+<p>Thanks.</p>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>My First Post</title>
 	  <link>/jasper//my-first-post</link>
 	  <author>Jensen Su</author>
