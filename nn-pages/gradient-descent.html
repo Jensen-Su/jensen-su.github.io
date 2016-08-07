@@ -171,23 +171,23 @@ $$ \vec x_0 := [random ~initialization]\\
 \vec x_{t+1} := \vec x_t -  \eta\nabla_C(\vec x_t)$$
 
 where $\eta$ controls the step size of each iteration. In some well-designed versions of gradient 
-descent, $\eta$ may vary at each iteration.
+descent, $\eta$ may varies at each iteration.
 </p>
 
 <p> It is quite simple and clear enough for anybody who can work out the gradient to realize 
 such algorithm. However simple and straightforward, I find myself unconvinced. 
 How comes it with this form? How does it make sense? 
-Why does $\vec x$ minus (rather than plus) the term $\eta\nabla_C(\vec x_t)$?
+Why does $\vec x$ minus (instead of plus) the term $\eta\nabla_C(\vec x_t)$?
 </p>
 
 <p> After a few derivations, I gained some insights into it.</p>
 
 <p> Recall from calculus that, if we were to make some small changes $\Delta x$ on $\vec x$, the changes on
 output $C$ would be 
-$$\Delta C = \nabla_C \cdot \Delta x.$$
-How should we choose the $\Delta x$, such that $\Delta C$ always be negative, knowing we would like the objective
+$$\Delta C = \nabla_C \cdot \Delta. x$$
+How should we choose the $\Delta x$  to make $\Delta C$ always be negative, knowing we would like the objective
 function $C(\vec x)$ to decrease a small amount each iteration to reach a minimum? The eaiest way would
-be to choose $\Delta x = -\nabla_C$, such that $\Delta C = - \nabla_C^2$ would be negative.
+be to choose $\Delta x = -\nabla_C$, so $\Delta C = - \nabla_C^2$ would be negative.
 </p>
 
 <p> Now we've known how it comes with the form $\vec x_{t+1} := \vec x_t -  \eta\nabla_C(\vec x_t)$. It decreases 
@@ -195,7 +195,7 @@ $\vec x$ by a small amount of $\eta\nabla_C(\vec x_t)$ each iteration to decreas
 by a small amount, hopefully to reach a minimum after some iterations.
 </p>
 
-<p> It is therefore makes sense that we could take the form  $\vec x_{t+1} := \vec x_t + \eta\nabla_C(\vec x_t)$ to
+<p> It is therefore obvious that we can take the form  $\vec x_{t+1} := \vec x_t + \eta\nabla_C(\vec x_t)$ to
 find a maximum of a objective function.
 </p>
 
@@ -211,13 +211,13 @@ minimize $\nabla_C \cdot \Delta x$ is $ -\eta \Delta x$.
 </p>
 
 <p>
-Although gradient descent is the steepest descent, it is not neccessary the one that convergences fartest. 
-Instead, it sometimes convergences much slow, wandering about around the nearby minimum.
+Although gradient descent is the steepest descent, it is not neccessary the one that convergences fartest, 
+instead, it sometimes convergences much slow, wandering about around the nearby minimum.
 Some other algorithms that convergence faster like <em>Newton method </em> and <em> quasi Newton method </em>
 are two-order optimization algorithms. I plan to investigate and summarize these two methods in the next post. 
 </p>
 
-<p> Since It is mostly my self-understanding, there probably be some mistakes.
+<p> Since It is mostly my self-understanding, there must be some mistakes.
 Please kindly leave your comments, thank you^.^ </p>
 
 
@@ -262,27 +262,52 @@ Please kindly leave your comments, thank you^.^ </p>
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
-            </section>
+
+                <a href="javascript:void(0);" onclick="window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(document.location.href)); return false;">
+                    <img src="http://qzonestyle.gtimg.cn/ac/qzone_v5/app/app_share/qz_logo.png"/>
+                </a>
+
+
+                <!--
+                <script type="text/javascript">document.write('<iframe frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?url=%url%&appkey=&type=3" width="16" height="16"></iframe>'.replace(/%url%/,encodeURIComponent(location.href)));</script>
+                -->
             
+            </section>
+
             <!-- Add Disqus Comments -->
             
             
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+                /*
+                var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = '//fireflies-the-sea.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
         </footer>
 
     </article>
-
 </main>
 
 <aside class="read-next">
 
     <!-- [[! next_post ]] -->
-    
-        <a class="read-next-story " style="background-image: url(/jasper/assets/images/valley_with_ball.png)" href="/jasper/learning-theory">
-            <section class="post">
-                <h2>The Learning Theroy</h2>
-                <p>$~$ ####1. Openning words 我们知道，在机器学习中，当模型过于简单(数据集很大)时，往往会发生**欠拟合(underfitting)**，也就是模型的学习能力太弱，没有很好地捕获到数据集的共性，当用该模型对新数据进行预测时，就会发生偏差;当模型过于复杂(数据集却很小)时，往往很容易发生**过拟合(overfitting)**，也就是模型学习能力太强，把数据中的扰动误以为是数据集的共同特性，当用该模型进行预测时，就会对扰动(比如噪声)十分敏感。 对此周志华教授的《机器学习》有个很好的例子，比如我们采集了一些树叶作为训练集，尝试对树叶进行学习，使得习得的模型可以预测新样例是不是树叶。如果训练集很大，包含了各种奇形怪状的样子，一个欠拟合的模型可能会把所有绿色的新样例都判定为树叶;如果训练集很小，比如恰好采集的树叶的边缘都具有锯齿，一个过拟合的模型将认为锯齿是所有树叶的共性，并将没有锯齿的树叶认定为不是树叶。 这是欠拟合和过拟合的直观理解。不管发生欠拟合还是过拟合，该模型用于预测新的样例时，都会发生明显的误差，这个误差就是**泛化误差(generalization error)**。实际上，泛化误差可以分为三个部分的叠加。也就是偏差(bias)、方差(variance)、和噪声(noise)。当发生欠拟合，偏差比重上升占据主导地位，当发生过拟合时，方差比重则上升并占据主导地位。 于是引出了第一个问题： **问题1** 偏差和方差看起来是此消彼长的关系，我们应该对它们进行折衷，那么我们能否对它们进行量化，从而从理论上找到一个最好的折衷点呢？ 从上面的讨论中发现，我们最关心的其实是模型对新样例的预测能力，或者说泛化误差，然而我们的模型却是在训练集中习得，所习得的模型对于训练集中的样例的预测误差称为经验误差。那么就有了下面的问题： **问题2** 在训练集上表现良好的模型面对新样例时表现如何呢？训练误差和泛化误差之间是否存在可以量化的联系？ **问题3**...</p>
-            </section>
-        </a>
     
     <!-- [[! /next_post ]] -->
     <!-- [[! prev_post ]] -->
