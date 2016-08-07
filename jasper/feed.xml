@@ -8,13 +8,13 @@
     
       
       <item>
-        <title>Notes On SVM</title>
+        <title>Notes on SVM</title>
         
-          <description>&lt;p&gt;对于一个新的样例（example)， 在 $logistic$ 回归中，首先将这个样例的各个特征 (feature) 加权相加 ($x_0 = 1$ 看作是它的一个特征)，得到的结果通过一个 $sigmoid$ 函数，映射成一个 $0~1$ 的值。然后以 $0.5$ 为临界点，当大于 $0.5$ 时，我们把它判定为一类（比如正类），否则我们把它判定成另一类（比如负类）。而 $sigmoid$ 的输出越接近 $1$ 或 $0$ 我们对这个分类的结果就越有信心。&lt;/p&gt;
+          <description>&lt;p&gt;&lt;/p&gt;
 
 </description>
         
-        <pubDate>Sat, 06 Aug 2016 20:10:00 +0800</pubDate>
+        <pubDate>Sat, 06 Aug 2016 18:10:00 +0800</pubDate>
         <link>
         http://jensen-su.github.io/jasper//notes-on-svm</link>
         <guid isPermaLink="true">http://jensen-su.github.io/jasper//notes-on-svm</guid>
@@ -72,21 +72,6 @@ used algorithm to train the neural networks in deep learning.
         <link>
         http://jensen-su.github.io/jasper//my-first-post</link>
         <guid isPermaLink="true">http://jensen-su.github.io/jasper//my-first-post</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>The Businessman &amp; the fisherman</title>
-        
-          <description>&lt;p&gt;An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to the pier to clear his head. A small boat with just one fisherman had docked, and inside the boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 12 Aug 2014 18:18:00 +0800</pubDate>
-        <link>
-        http://jensen-su.github.io/jasper//the-businessman-and-fisherman</link>
-        <guid isPermaLink="true">http://jensen-su.github.io/jasper//the-businessman-and-fisherman</guid>
       </item>
       
     

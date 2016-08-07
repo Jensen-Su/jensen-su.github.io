@@ -34,7 +34,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- [[! Page Meta ]] -->
-    <title>Notes On SVM</title>
+    <title>Notes on SVM</title>
     <meta name="description" content="Firefly In The Darkness, Flittering About - Doubt thout the stars are fire, Doubt that the sun doth move, Doubt truth to be a liar, But never doubt the lights" />
 
     <meta name="HandheldFriendly" content="True" />
@@ -120,7 +120,7 @@
 <!-- Everything inside the #post tags pulls data from the post -->
 <!-- #post -->
 
-<header class="main-header post-head " style="background-image: url(/jasper/assets/images/cover4.jpg) ">
+<header class="main-header post-head " style="background-image: url(/jasper/assets/images/valley_with_ball.png) ">
     <nav class="main-nav  overlay  clearfix">
         <a class="blog-logo" href="/jasper/"><img src="/jasper/assets/images/ghost.png" alt="Blog Logo" /></a>
         
@@ -131,10 +131,10 @@
 
 <main class="content" role="main">
 
-    <article class="post tag-Test">
+    <article class="post tag-MachinLearning">
 
         <header class="post-header">
-            <h1 class="post-title">Notes On SVM</h1>
+            <h1 class="post-title">Notes on SVM</h1>
             <section class="post-meta">
             <!-- <a href='/jasper/'>Jensen Su</a> -->
             <time class="post-date" datetime="2016-08-06">06 Aug 2016</time>
@@ -143,7 +143,7 @@
                 on 
                 
                     
-                       <a href='/jasper/tag/Test'>Test</a>
+                       <a href='/jasper/tag/MachineLearning'>Machinelearning</a>
                        
                 
                 
@@ -152,11 +152,27 @@
 
         <section class="post-content">
             
-            <p>对于一个新的样例（example)， 在 $logistic$ 回归中，首先将这个样例的各个特征 (feature) 加权相加 ($x_0 = 1$ 看作是它的一个特征)，得到的结果通过一个 $sigmoid$ 函数，映射成一个 $0~1$ 的值。然后以 $0.5$ 为临界点，当大于 $0.5$ 时，我们把它判定为一类（比如正类），否则我们把它判定成另一类（比如负类）。而 $sigmoid$ 的输出越接近 $1$ 或 $0$ 我们对这个分类的结果就越有信心。</p>
+            <p></p>
 
-<p>$sigmoid$ 函数是一个单调递增函数，当输入为$0$时，输出恰好是$0.5$。 因此实际上可以通过对加权相加的值进行判断，如果它大于$0$，那么把它预测为正类，否则为负类。它的绝对值越大，那么我们对预测结果的信心就越强。</p>
+<hr/>
+<h3 id="heading3"> 引入 </h3>
+<hr />
 
-<p>SVM的第一个想法就是将这个信心量化。</p>
+<p>  
+对于一个新的样例（example)， 在 $logistic$ 回归中，首先将这个样例的各个特征 (feature) 加权相加 ($x_0 = 1$ 看作是它的一个特征)，得到的结果通过一个 $sigmoid$ 函数，映射成一个 $0~1$ 的值。然后以 $0.5$ 为临界点，当大于 $0.5$ 时，我们把它判定为一类（比如正类），否则我们把它判定成另一类（比如负类）。而 $sigmoid$ 的输出越接近 $1$ 或 $0$ 我们对这个分类的结果就越有信心。
+
+</p>
+
+<p>
+$sigmoid$ 函数是一个单调递增函数，当输入为$0$时，输出恰好是$0.5$。 因此实际上可以通过对加权相加的值进行判断，如果它大于$0$，那么把它预测为正类，否则为负类。它的绝对值越大，那么我们对预测结果的信心就越强。
+</p>
+
+<p>
+SVM的第一个想法就是将这个信心量化。
+</p>
+
+
+
 
 
         </section>
@@ -188,7 +204,7 @@
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="icon-twitter" href="http://twitter.com/share?text=Notes On SVM&amp;url=http://jensen-su.github.io/jasper/notes-on-svm"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Notes on SVM&amp;url=http://jensen-su.github.io/jasper/notes-on-svm"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
