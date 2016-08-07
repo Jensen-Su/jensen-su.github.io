@@ -1,79 +1,28 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Firefly In The Darkness, Flittering About - Articles</title>
-    <description>Doubt thout the stars are fire, Doubt that the sun doth move, Doubt truth to be a liar, But never doubt the lights</description>
+    <title>{{ site.name | xml_escape }} - Articles</title>
+    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
     <link>
-    http://jensen-su.github.io/jasper/</link>
-    
-      
+    {{ site.url }}</link>
+    {% for post in site.posts %}
+      {% unless post.link %}
       <item>
-        <title>Notes on SVM</title>
-        
-          <description>&lt;p&gt;&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Fri, 05 Aug 2016 18:10:00 +0800</pubDate>
+        <title>{{ post.title | xml_escape }}</title>
+        {% if post.excerpt %}
+          <description>{{ post.excerpt | xml_escape }}</description>
+        {% else %}
+          <description>{{ post.content | xml_escape }}</description>
+        {% endif %}
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <link>
-        http://jensen-su.github.io/jasper//notes-on-svm</link>
-        <guid isPermaLink="true">http://jensen-su.github.io/jasper//notes-on-svm</guid>
+        {{ site.url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
       </item>
-      
-    
-      
-      <item>
-        <title>The Learning Theroy</title>
-        
-          <description>&lt;p&gt;$~$&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 30 Jul 2016 18:10:00 +0800</pubDate>
-        <link>
-        http://jensen-su.github.io/jasper//learning-theory</link>
-        <guid isPermaLink="true">http://jensen-su.github.io/jasper//learning-theory</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>The Gradient Descent</title>
-        
-          <description>&lt;p&gt; &lt;/p&gt;
-&lt;p&gt; The cover picture is taken from Michael Nielsen&#39;s book 
-&lt;a href=&quot;http://neuralnetworksanddeeplearning.com/index.html&quot;&gt;&lt;em&gt; Neural Networks and Deep Learning&lt;/em&gt;.
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gradient_descent&quot;&gt;&lt;strong&gt;Gradient descent&lt;/strong&gt;&lt;/a&gt;, 
-also known as &lt;em&gt;steepest descent&lt;/em&gt;, is a first-order optimization algorithm mostly used to 
-find a local minimum of a given contunious, differentiable function. For convex functions,
-the local minimum is also the global minimum. Therefore gradient descent is widely used 
-to solve the unconstrained optimization problem. One of its versions is also the most commonly 
-used algorithm to train the neural networks in deep learning.
-&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Mon, 11 Jul 2016 18:10:00 +0800</pubDate>
-        <link>
-        http://jensen-su.github.io/jasper//gradient-descent</link>
-        <guid isPermaLink="true">http://jensen-su.github.io/jasper//gradient-descent</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>My First Post</title>
-        
-          <description>&lt;p&gt; Hello world, this is my first post. &lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 10 Jul 2016 18:10:00 +0800</pubDate>
-        <link>
-        http://jensen-su.github.io/jasper//my-first-post</link>
-        <guid isPermaLink="true">http://jensen-su.github.io/jasper//my-first-post</guid>
-      </item>
-      
-    
+      {% endunless %}
+    {% endfor %}
   </channel>
 </rss>
