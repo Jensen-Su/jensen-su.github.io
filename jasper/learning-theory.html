@@ -174,7 +174,7 @@
 
 <h4 id="premininaries">2. Premininaries</h4>
 
-<p>在对这些问题进行探讨之前，我们先引出学习理论中许多理论所依赖的PAC(probably approximately corrent, 可能大概是对的)框架中极为重要的一条假设：</p>
+<p>在对这些问题进行探讨之前，我们先引出学习理论中许多理论所依赖的PAC(probably approximately corrent, 概率近似正确)框架中极为重要的一条假设：</p>
 
 <p><strong>训练集和测试集中的样本相互独立同分布</strong></p>
 
@@ -184,7 +184,7 @@
 
 <ul>
   <li>分布(伯努利):  $\mathcal{D}$</li>
-  <li>训练集：       $S = {(x^{(i)}, y^{(i)}); i = 1, …, m}$</li>
+  <li>训练集：       $S = \{(x^{(i)}, y^{(i)}); i = 1, …, m\}$</li>
   <li>训练集大小：   $m$</li>
   <li>特征向量:      $x^{(i)}$</li>
   <li>对应标签：     $y^{(i)}$</li>
@@ -198,7 +198,7 @@
   <li>置信度:        $1-\delta,~\delta &gt; 0$</li>
 </ul>
 
-<p><strong>定义1. 训练误差</strong> $\hat{\epsilon}(h) = \frac{1}{m}\sum_{i=1}^{m} 1{h(x^{(i)}) \neq y^{(i)}}.$ 也就是 训练集中 被假设 $h$ 误分类的样本比例，也称为<em>经验风险</em>或者*经验误差。</p>
+<p><strong>定义1. 训练误差</strong> $\hat{\epsilon}(h) = \frac{1}{m}\sum_{i=1}^{m} 1\{h(x^{(i)}) \neq y^{(i)}\}.$ 也就是 训练集中 被假设 $h$ 误分类的样本比例，也称为<em>经验风险</em>或者*经验误差。</p>
 
 <p><strong>定义2. 泛化误差</strong> $\epsilon (h) = P_{(x,y)\sim\mathcal{D}}(h(x) \neq y).$ 也就是当我们从分布$\mathcal{D}$中抽取一个新样例，假设$h$对其误分类的概率。</p>
 
@@ -329,7 +329,7 @@
         <a class="read-next-story " style="background-image: url(/jasper/assets/images/valley_with_ball.png)" href="/jasper/notes-on-svm">
             <section class="post">
                 <h2>Notes on SVM</h2>
-                <p>$~$ #### 引入 对于一个新的样例（example)， 在 $logistic$ 回归中，首先将这个样例的各个特征 (feature) 加权相加 ($x_0 = 1$ 看作是它的一个特征)，得到的结果通过一个 $sigmoid$ 函数，映射成一个...</p>
+                <p>$~$ **博主注：以下纯属自己的理解，不合理的地方，非常期待读者能给予指正; 如果读者对某部分能提出更好的解释，那就更好了。** #### 引入 对于一个新的样例（example): $~x = (x_0, x_1, ..., x_n)^T~$，其中$~x_0 = 1~$, 在...</p>
             </section>
         </a>
     
