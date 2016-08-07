@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--mathjax-->
+    <script type="text/javascript" 
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}}); </script>
+
+    <style>
+    /* Adapted from */
+    /* https://groups.google.com/d/msg/mathjax-users/jqQxrmeG48o/oAaivLgLN90J, */
+    /* by David Cervone */
+
+    @font-face {
+        font-family: 'MJX_Math';
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); /* IE9 Compat Modes */
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot?iefix') format('eot'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff')  format('woff'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf')  format('opentype'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/svg/MathJax_Math-Italic.svg#MathJax_Math-Italic') format('svg');
+    }
+
+    @font-face {
+        font-family: 'MJX_Main';
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); /* IE9 Compat Modes */
+        src: url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot?iefix') format('eot'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff')  format('woff'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf')  format('opentype'),
+        url('https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/svg/MathJax_Main-Regular.svg#MathJax_Main-Regular') format('svg');
+    }
+    </style>
+    <!-- [[! Document Settings ]] -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- [[! Page Meta ]] -->
+    <title>The Learning Theroy</title>
+    <meta name="description" content="Firefly In The Darkness, Flittering About - Doubt thout the stars are fire, Doubt that the sun doth move, Doubt truth to be a liar, But never doubt the lights" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/jasper/assets/images/favicon.ico" >
+
+    <!-- [[! Styles'n'Scripts ]] -->
+    <link rel="stylesheet" type="text/css" href="/jasper/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css"
+          href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/jasper/assets/css/syntax.css" />
+
+    <!-- [[! highlight.js ]] -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- [[! Ghost outputs important style and meta data with this tag ]] -->
+        <link rel="canonical" href="/jasper/" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/jasper/page2/" />
+
+    <meta property="og:site_name" content="Firefly In The Darkness, Flittering About" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Firefly In The Darkness, Flittering About" />
+    <meta property="og:description" content="Doubt thout the stars are fire, Doubt that the sun doth move, Doubt truth to be a liar, But never doubt the lights" />
+    <meta property="og:url" content="/jasper/" />
+    <meta property="og:image" content="/jasper/assets/images/cover1.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Firefly In The Darkness, Flittering About" />
+    <meta name="twitter:description" content="Doubt thout the stars are fire, Doubt that the sun doth move, Doubt truth to be a liar, But never doubt the lights" />
+    <meta name="twitter:url" content="/jasper/" />
+    <meta name="twitter:image:src" content="/jasper/assets/images/cover1.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "Finding The Way Home",
+    "url": "/jasper/",
+    "image": "/jasper/assets/images/cover1.jpg",
+    "description": "Doubt thout the stars are fire, Doubt that the sun doth move, Doubt truth to be a liar, But never doubt the lights"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="Firefly In The Darkness, Flittering About" href="/jasper/feed.xml" />
+
+
+</head>
+
+<body class="home-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/jasper/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/jasper/about">About</a></li>
+        <li class="nav-fables " role="presentation"><a href="/jasper/tag/fables">Fables</a></li>
+        <li class="nav-speeches " role="presentation"><a href="/jasper/tag/speeches">Speeches</a></li>
+        <li class="nav-fiction " role="presentation"><a href="/jasper/tag/fiction">Fiction</a></li>
+        <li class="nav-author " role="presentation"><a href="/jasper/author/casper">Author</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/jasper/feed.xml">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- [[! Everything else gets inserted here ]] -->
+        <!-- < default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head " style="background-image: url(/jasper/assets/images/valley_with_ball.png) ">
+    <nav class="main-nav  overlay  clearfix">
+        <a class="blog-logo" href="/jasper/"><img src="/jasper/assets/images/ghost.png" alt="Blog Logo" /></a>
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-MachineLearning">
+
+        <header class="post-header">
+            <h1 class="post-title">The Learning Theroy</h1>
+            <section class="post-meta">
+            <!-- <a href='/jasper/'>Jensen Su</a> -->
+            <time class="post-date" datetime="2016-07-30">30 Jul 2016</time>
+                <!-- [[tags prefix=" on "]] -->
+                 
+                on 
+                
+                    
+                       <a href='/jasper/tag/MachineLearning'>Machinelearning</a>
+                       
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+            
+            <p>$~$</p>
+
+<h4 id="openning-words">1. Openning words</h4>
+
+<p>我们知道，在机器学习中，当模型过于简单(数据集很大)时，往往会发生<strong>欠拟合(underfitting)</strong>，也就是模型的学习能力太弱，没有很好地捕获到数据集的共性，当用该模型对新数据进行预测时，就会发生偏差;当模型过于复杂(数据集却很小)时，往往很容易发生<strong>过拟合(overfitting)</strong>，也就是模型学习能力太强，把数据中的扰动误以为是数据集的共同特性，当用该模型进行预测时，就会对扰动(比如噪声)十分敏感。</p>
+
+<p>对此周志华教授的《机器学习》有个很好的例子，比如我们采集了一些树叶作为训练集，尝试对树叶进行学习，使得习得的模型可以预测新样例是不是树叶。如果训练集很大，包含了各种奇形怪状的样子，一个欠拟合的模型可能会把所有绿色的新样例都判定为树叶;如果训练集很小，比如恰好采集的树叶的边缘都具有锯齿，一个过拟合的模型将认为锯齿是所有树叶的共性，并将没有锯齿的树叶认定为不是树叶。</p>
+
+<p>这是欠拟合和过拟合的直观理解。不管发生欠拟合还是过拟合，该模型用于预测新的样例时，都会发生明显的误差，这个误差就是<strong>泛化误差(generalization error)</strong>。实际上，泛化误差可以分为三个部分的叠加。也就是偏差(bias)、方差(variance)、和噪声(noise)。当发生欠拟合，偏差比重上升占据主导地位，当发生过拟合时，方差比重则上升并占据主导地位。</p>
+
+<p>于是引出了第一个问题：</p>
+
+<p><strong>问题1</strong> 偏差和方差看起来是此消彼长的关系，我们应该对它们进行折衷，那么我们能否对它们进行量化，从而从理论上找到一个最好的折衷点呢？</p>
+
+<p>从上面的讨论中发现，我们最关心的其实是模型对新样例的预测能力，或者说泛化误差，然而我们的模型却是在训练集中习得，所习得的模型对于训练集中的样例的预测误差称为经验误差。那么就有了下面的问题：</p>
+
+<p><strong>问题2</strong> 在训练集上表现良好的模型面对新样例时表现如何呢？训练误差和泛化误差之间是否存在可以量化的联系？</p>
+
+<p><strong>问题3</strong> 如果这种可量化的关系的存在，是否可以证明？需要什么假设呢？</p>
+
+<h4 id="premininaries">2. Premininaries</h4>
+
+<p>在对这些问题进行探讨之前，我们先引出学习理论中许多理论所依赖的PAC(probably approximately corrent, 可能大概是对的)框架中极为重要的一条假设：</p>
+
+<p><strong>训练集和测试集中的样本相互独立同分布</strong></p>
+
+<p>本文假设这一分布为<strong>伯努利分布</strong>，也就是<strong>二分类</strong>问题，得到的结果同样适用于其他分布。</p>
+
+<h6 id="notations">2.1 Notations</h6>
+
+<ul>
+  <li>分布(伯努利):  $\mathcal{D}$</li>
+  <li>训练集：       $S = {(x^{(i)}, y^{(i)}); i = 1, …, m}$</li>
+  <li>训练集大小：   $m$</li>
+  <li>特征向量:      $x^{(i)}$</li>
+  <li>对应标签：     $y^{(i)}$</li>
+  <li>特征向量集：   $x$</li>
+  <li>对应标签集：   $y$</li>
+  <li>假设:          $h$ 或 $h_\theta$,其中$\theta$为假设中待训练的模型参数</li>
+  <li>训练误差：     $\hat{\epsilon}(h)$</li>
+  <li>泛化误差：     $\epsilon (h)$</li>
+  <li>假设空间：     $\mathcal{H}$</li>
+  <li>假设空间大小： $k$</li>
+  <li>置信度:        $1-\delta,~\delta &gt; 0$</li>
+</ul>
+
+<p><strong>定义1. 训练误差</strong> $\hat{\epsilon}(h) = \frac{1}{m}\sum_{i=1}^{m} 1{h(x^{(i)}) \neq y^{(i)}}.$ 也就是 训练集中 被假设 $h$ 误分类的样本比例，也称为<em>经验风险</em>或者*经验误差。</p>
+
+<p><strong>定义2. 泛化误差</strong> $\epsilon (h) = P_{(x,y)\sim\mathcal{D}}(h(x) \neq y).$ 也就是当我们从分布$\mathcal{D}$中抽取一个新样例，假设$h$对其误分类的概率。</p>
+
+<h6 id="assumptions">2.2 Assumptions</h6>
+
+<p><strong>假设1</strong> 对于给定的假设，我们是通过<strong>经验最小化(EMR)</strong>的方法来选取模型参数：</p>
+
+<script type="math/tex; mode=display">\hat{\theta} = arg~\mathop{min}\limits_\theta\hat{\epsilon}(h_\theta)</script>
+
+<p>意思就是选取使得训练误差最小的模型参数。</p>
+
+<p><strong>假设2</strong> 对于给定的假设空间 $\mathcal{H}$, 我们也通过经验最小化来选出最优假设：</p>
+
+<script type="math/tex; mode=display">\hat{h} = arg~\mathop{min}\limits_{h \in \mathcal{H}}\hat{\epsilon}(h_\theta)</script>
+
+<p>意思就是在假设空间里面选取使得训练误差最小的假设。</p>
+
+<h4 id="conclusion">3. Conclusion</h4>
+<p>做完以上的准备工作之后，我们直接给出结论。对于结论的证明以后再补上。</p>
+
+<p>假设我们有一个大小为$k$的假设集 $\mathcal{H} = {h_1, …, h_k}$. 给定训练样本数 $m$, 给定 $\gamma &gt; 0$, 
+那么所有的假设$h_i$的泛化误差$\epsilon (h)$ 偏离经验误差 $\hat{\epsilon}(h)$ 均不大于 $\gamma$ 的概率至少为</p>
+
+<script type="math/tex; mode=display">1 - 2k~exp(-2\gamma^2m)</script>
+
+<p>即<strong>一致收敛</strong>(<em>uniform convergence</em>)结论. （也可以这样看，至少有一个假设的经验误差偏离泛化误差$\gamma$之外的概率不大于$2k~exp(-2\gamma^2m)$.)</p>
+
+<p><strong>问题1</strong>： 给定$\gamma$和置信度$1 - \delta$, $m$ 必须取多大才能保证对于训练误差与泛化误差的偏差$|\epsilon(h)-\hat{\epsilon}(h)| \le \gamma$？</p>
+
+<p><strong>结论</strong>: 令$1 - 2k~exp(-2\gamma^2m) \ge 1 - \delta$, 可以求得$m$的一个下界：</p>
+
+<script type="math/tex; mode=display">m \ge \frac{1}{2\gamma^2}log\frac{2k}{\delta}.</script>
+
+<p>这告诉我们：</p>
+
+<ol>
+  <li>样本数与给定偏差 $\gamma$ 成二次反比，因此样本越大，训练误差与泛化误差相差越小.</li>
+  <li><strong>更有指导意义的是，训练集大小$m$的下界与假设空间$\mathcal{H}$的大小只是对数关系.</strong></li>
+</ol>
+
+<p>为了保证一定的性能，一个算法所要求训练集的大小 $m$ 称为该算法的<strong>取样复杂度(sample complexity)</strong>.</p>
+
+<p><strong>问题2</strong>： 给定训练集大小$m$和置信度$1-\delta&gt;0$, 训练误差与泛化误差的偏差$|\epsilon(h)-\hat{\epsilon}(h)|$ 的上界是多少？</p>
+
+<p><strong>结论1</strong>: 令$2k~exp(-2\gamma^2m) = \delta$, 可以求得$\gamma$的一个上界：</p>
+
+<script type="math/tex; mode=display">|\epsilon(h)-\hat{\epsilon}(h)| \le \sqrt{\frac{1}{2m}log\frac{2k}{\delta}}.</script>
+
+<p><strong>注意，这是对于假设空间的所有假设$h\in\mathcal{H}$都成立的</strong>. 那么对于我们根据经验最小化原则选取的假设$\hat{h} = arg~\mathop{min}\limits_{h \in \mathcal{H}}\hat{\epsilon}(h_\theta)$来说会有什么样的上界呢？</p>
+
+<p>我们把问题2的结论中$\gamma$的上界记为$\gamma_0$. 即$ |\epsilon(h)-\hat{\epsilon}(h)| \le \gamma_0$.</p>
+
+<p>对于我们选取的假设$\hat{h}$有$|\epsilon(\hat{h})-\hat{\epsilon}(\hat{h})|\le\gamma_0$, 或者 $\epsilon(\hat{h}) \le \hat{\epsilon}(\hat{h}) + \gamma_0$.</p>
+
+<p>对于最优假设$h^*$, 同样有$|\hat{\epsilon}(h^*)-\epsilon(h^*)|\le\gamma_0$, 或者 $\hat{\epsilon}(h^*) \le \epsilon(h^*) + \gamma_0$.</p>
+
+<p><strong>结论2</strong>因此对于我们选取的假设有：</p>
+
+<script type="math/tex; mode=display">\epsilon(\hat{h}) \le \hat{\epsilon}(\hat{h}) + \gamma_0 
+                    \le \hat{\epsilon}(h^*) + \gamma_0 
+                    \le \epsilon(h^*) + \gamma_0</script>
+
+<p>也就是说在一致收敛的前提下，根据经验最小化原则习得的假设的泛化误差比假设空间里面最好的假设的泛化误差相差不大于$2\gamma_0$!</p>
+
+<p><strong>定理</strong> 设 $|\mathcal{H}|=k$, 给定训练集大小$m$和置信度$1-\delta$, 对于由经验最小化习得的假设，有：</p>
+
+<script type="math/tex; mode=display">\epsilon(\hat{h}) \le \left(\mathop{min}\limits_{h\in\mathcal{H}}\epsilon(h)\right)+ 2\sqrt{\frac{1}{2m}log\frac{2k}{\delta}}</script>
+
+<p>这个定理量化了我们讨论的偏差与方差间的折衷问题。例如原来的假设空间为$\mathcal{H}$,如果我们考虑一个更大的假设空间 $\mathcal{H’} \supsetneqq \mathcal{H}$, 那么上式第一项会减小，也就是偏差减小;然而由于假设空间变大，即$k$变大，会使得第二项变大，也就是方差变大。</p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+
+            
+            <figure class="author-image">
+                <a class="img" href="/jasper/author/shindou" style="background-image: url(/jasper/assets/images/casper.png)"><span class="hidden">'s Picture</span></a>
+            </figure>
+            
+
+            <section class="author">
+                <h4><a href="/jasper/author/shindou">Jensen Su</a></h4>
+                
+                
+                    <p> State Key Lab. of Asic & Sys. Fudan University.</p>
+                
+                <div class="author-meta">
+                    <span class="author-location icon-location"> Shanghai, CH</span> 
+                    <span class="author-link icon-link"><a href="http://jensen-su.github.io/jasper/"> jensen-su.github.io/jasper/</a></span> 
+                </div>
+            </section>
+
+            <!-- /author  -->
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="http://twitter.com/share?text=The Learning Theroy&amp;url=http://jensen-su.github.io/jasper/learning-theory"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://jensen-su.github.io/jasper/learning-theory"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://jensen-su.github.io/jasper/learning-theory"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+            
+            <!-- Add Disqus Comments -->
+            
+            
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+        <a class="read-next-story " style="background-image: url(/jasper/assets/images/valley_with_ball.png)" href="/jasper/notes-on-svm">
+            <section class="post">
+                <h2>Notes on SVM</h2>
+                <p>引入 对于一个新的样例（example)， 在 $logistic$ 回归中，首先将这个样例的各个特征 (feature) 加权相加 ($x_0 = 1$ 看作是它的一个特征)，得到的结果通过一个 $sigmoid$ 函数，映射成一个 $0~1$ 的值。然后以...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev " style="background-image: url(/jasper/assets/images/valley_with_ball.png)" href="/jasper/gradient-descent">
+            <section class="post">
+                <h2>The Gradient Descent</h2>
+                <p>The cover picture is taken from Michael Nielsen's book Neural Networks and Deep Learning. Gradient...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <footer class="site-footer clearfix">
+          <section class="copyright"><a href="/jasper/">Firefly In The Darkness, Flittering About</a> &copy; 2016</section>
+          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/biomadeira/jasper">Jasper</a></section>
+        </footer>
+    </div>
+    <!-- [[! Ghost outputs important scripts and data with this tag ]] -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- [[! The main JavaScript file for Casper ]] -->
+    <script type="text/javascript" src="/jasper/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/jasper/assets/js/index.js"></script>
+
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', 'UA-69281367-1', 'auto');
+	    ga('send', 'pageview');
+
+     </script>   
+</body>
+</html>
